@@ -10,16 +10,16 @@ const MovieHeader = ({ setYear }) => {
     setYear(years);
   }
 
-
   return (
     <div className="movieHeader">
-      <h2>MOVIE LIST</h2>
+    <h2>MOVIE LIST</h2>
       <div className='check'>
         <p className="title">개봉연도 선택</p>
+        <div className="yearbutton">
         <p>
           <button
             onClick={() => clickBtn('all')}
-            className={setSelectedYear == 'all' ? 'active' : ''}
+            className={selectedYear === 'all' ? 'active' : ''}
           >
             전체
           </button>
@@ -27,7 +27,7 @@ const MovieHeader = ({ setYear }) => {
         <p>
           <button
             onClick={() => clickBtn(2023)}
-            className={setSelectedYear == 2023 ? 'active' : ''}
+            className={selectedYear === 2023 ? 'active' : ''}
           >
             2023
           </button>
@@ -35,7 +35,7 @@ const MovieHeader = ({ setYear }) => {
         <p>
           <button
             onClick={() => clickBtn(2022)}
-            className={setSelectedYear == 2022 ? 'active' : ''}
+            className={selectedYear === 2022 ? 'active' : ''}
           >
             2022
           </button>
@@ -43,7 +43,7 @@ const MovieHeader = ({ setYear }) => {
         <p>
           <button
             onClick={() => clickBtn(2021)}
-            className={setSelectedYear == 2021 ? 'active' : ''}
+            className={selectedYear === 2021 ? 'active' : ''}
           >
             2021
           </button>
@@ -51,11 +51,12 @@ const MovieHeader = ({ setYear }) => {
         <p>
           <button
             onClick={() => clickBtn(2020)}
-            className={setSelectedYear == 2020 ? 'active' : ''}
+            className={selectedYear == 2020 ? 'active' : ''}
           >
             2020
           </button>
         </p>
+        </div>
       </div>
     </div>
   )

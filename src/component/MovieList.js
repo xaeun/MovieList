@@ -42,7 +42,6 @@ const MovieList = ({dummy, year}) => {
         </div>
             {/* <p className="all">총 {filterSearch.length}개의 영화리스트가 있습니다</p> */}
             <ul className="list">
-                {/* 이부분 검색부분이랑 카테고리 부분만 하면 끝!! */}
             {filterSearch().map((it)=>(
                 <MovieItem key={it.id} {...it}/>
             ))}

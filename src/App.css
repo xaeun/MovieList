@@ -1,33 +1,37 @@
 @charset "utf-8";
 /* App.css */
 
-.App{
-    width: 90%;
-    margin: 50px auto;
+.App {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: black;
+    position: relative;
 }
-.movieHeader{
-    padding: 25px 20px 5px 25px; 
-    background-color: rgb(0, 0, 0);
+
+.movieHeader {
+    padding: 25px 20px 5px 25px;
     color: whitesmoke;
 }
-.movieList{
-    padding: 15px 20px 15px 25px; 
+.movieList {
+    padding: 15px 20px 15px 25px;
     background-color: rgb(0, 0, 0);
     color: whitesmoke;
 }
 
-h2{
+h2 {
     font-size: 30px;
     line-height: 1em;
     margin-bottom: 20px;
 }
 
-.movieList .search{
+.movieList .search {
     display: flex;
     font-size: 20px;
-    margin: 0 auto; 
+    margin: 0 auto;
 }
-.movieList .search input{
+
+.movieList .search input {
     width: 40%;
     background-color: black;
     border: transparent;
@@ -39,17 +43,28 @@ h2{
     vertical-align: top;
     margin: -5px 10px 15px 10px;
 }
-.movieList .search button{
+
+.movieList .search button {
     font-size: 18px;
     color: #ccc;
     display: inline-block;
     vertical-align: top;
     margin: -5px 10px 15px 10px;
 }
-.movieList .all{
+
+.movieList .all {
     font-size: 20px;
 }
-.movieHeader .check button{
+
+.check {
+    display: flex;
+}
+
+.yearbutton {
+    display: flex;
+}
+
+.movieHeader .yearbutton button {
     width: 65px;
     font-size: 20px;
     line-height: 1.5em;
@@ -58,36 +73,44 @@ h2{
     border-radius: 10px;
     color: white;
 }
-.check{
-    display: flex;
+
+.movieHeader .yearbutton .active {
+    background-color: #fff;
+    color: black;
 }
-.check .title{
+
+.check .title {
     margin-right: 10px;
     font-size: 20px;
     line-height: 1.5em;
-    
+
 }
-.list{
+
+.list {
     display: flex;
     flex-wrap: wrap;
     padding: 5px;
     box-sizing: border-box;
 }
-.movieItem{
+
+.movieItem {
     position: relative;
     width: 20%;
     padding: 0 5px;
     box-sizing: border-box;
     margin: 20px 0;
 }
-.movieItem div{
+
+.movieItem div {
     margin: 0 10px 10px 0;
 }
-.movieItem img{
+
+.movieItem img {
     width: 100%;
     height: auto;
 }
-.movieItem .over{
+
+.movieItem .over {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -97,10 +120,12 @@ h2{
     opacity: 0;
     transition: 0.4s;
 }
-.movieItem:hover .over{
+
+.movieItem:hover .over {
     opacity: 1;
 }
-.movieItem .over button{
+
+.movieItem .over button {
     position: absolute;
     left: 15%;
     top: 50%;
@@ -110,7 +135,8 @@ h2{
     margin-top: -30px;
     color: #fff;
 }
-.movieItem .modal{
+
+.movieItem .modal {
     display: none;
     position: fixed;
     top: 0;
@@ -121,22 +147,23 @@ h2{
     color: black;
     z-index: 100;
 }
-.movieItem .modal.show{
+
+.movieItem .modal.show {
     display: block;
 }
 
-.modal button{
+.modal button {
     position: absolute;
     bottom: 10px;
     right: 20px;
     font-size: 30px;
 }
 
-.movieModal{
+.movieModal {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%);
     width: 80%;
     padding: 30px;
     background-color: #fff;
@@ -144,23 +171,28 @@ h2{
     justify-content: center;
     font-size: 18px;
     line-height: 1.2em;
-}  
-.movieModal p{
+}
+
+.movieModal p {
     margin-bottom: 5px;
     word-break: keep-all;
 }
-.movieModal span{
+
+.movieModal span {
     font-size: 20px;
     font-weight: 500;
 }
-.movieModal div{
+
+.movieModal div {
     width: 70%;
 }
-.movieModal .modalphoto{
+
+.movieModal .modalphoto {
     width: 20%;
     margin-right: 20px;
 }
-.movieModal img{
+
+.movieModal img {
     width: 100%;
     height: 100%;
     object-fit: cover;
